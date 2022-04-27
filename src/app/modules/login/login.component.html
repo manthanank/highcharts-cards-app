@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Login</a>
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col">
+    <mat-card>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="mb-3">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-control" placeholder="Email" formControlName="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control"  placeholder="Password" formControlName="password">
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </form>
+    </mat-card>
+  </div>
+</div>
