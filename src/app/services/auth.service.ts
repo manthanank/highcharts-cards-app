@@ -10,14 +10,5 @@ export class AuthService {
     private router: Router
   ) { }
 
-  getAuthStatus(){
-    return localStorage.getItem('isAuthenticated') === 'true' ? true : false;
-  }
-  login(){
-    return localStorage.removeItem('isAuthenticated');
-  }
-  logout(){
-    localStorage.setItem('isAuthenticated', 'false');
-    this.router.navigate(['']);
-  }
+
 }
